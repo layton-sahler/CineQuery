@@ -1,56 +1,56 @@
-🎬 AI Movie Recommender
+AI Movie Recommender
 
-An AI-powered movie recommendation system that lets users ask natural language questions and get personalized movie suggestions.
+An AI powered movie recommendation system that enables users to ask natural language questions and receive personalized movie suggestions in real time.
 
-Built during a hackathon by TripeTSahur.
+Developed during a hackathon by Team TripeTSahur.
 
-👥 Team
+Team
 
-Tanish
-Sean
-Henry
-Layton
+Tanish  
+Sean  
+Henry  
+Layton  
 
-🚀 Overview
+Overview
 
-This project is a full-stack application that combines a modern frontend with an intelligent backend to recommend movies based on user prompts.
+This project is a full stack application that integrates an intuitive frontend with an intelligent backend to deliver context aware movie recommendations.
 
-Instead of browsing endlessly, users can simply ask:
+Instead of manually browsing through large catalogs, users can enter prompts such as:
 
-“Give me an action movie from the 90s”
-“I want something emotional but not too long”
-“Movies with a strong female lead”
+“Give me an action movie from the 90s”  
+“I want something emotional but not too long”  
+“Movies with a strong female lead”  
 
-The system interprets the request and returns relevant movie recommendations with explanations.
+The system processes these queries and returns relevant recommendations along with brief explanations.
 
-🧠 How It Works
-The user enters a query in the frontend interface
-The frontend sends the query to the backend API
-The backend uses:
-Snow Leopard to query a SQLite movie database
-OpenAI to refine and explain recommendations
-The backend returns structured results
-The frontend displays them in a Netflix-style UI
-🗂️ Tech Stack
+How It Works
 
-Frontend
+The user submits a query through the frontend interface  
+The frontend sends the request to the backend API  
+The backend processes the query using Snow Leopard to query a SQLite movie database and OpenAI to refine and generate explanations  
+The backend returns structured recommendation results  
+The frontend renders results in a Netflix inspired interface  
 
-React
-Netflix-style UI design
+Tech Stack
 
-Backend
+Frontend:  
+React  
+Custom Netflix inspired UI  
 
-Node.js / Express
-Snow Leopard API
-OpenAI API
+Backend:  
+Node.js  
+Express  
+Snow Leopard API  
+OpenAI API  
 
-Database
+Database  
+SQLite  
+Enriched using the OMDb API  
 
-SQLite
-Enriched with OMDb API
-📦 Features
-Natural language movie search
-AI-generated recommendations
-Clean Netflix-inspired UI
-Lightweight SQLite database
-Enriched movie metadata (plot, director, posters)
+Features
+
+Natural language based movie search  
+AI generated recommendations with explanations  
+Clean and responsive Netflix style interface  
+Lightweight SQLite database  
+Enriched movie metadata including plot, director, and posters  
