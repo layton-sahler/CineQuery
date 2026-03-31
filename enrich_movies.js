@@ -7,7 +7,6 @@ const SOURCE_DB = "netflix.db";
 const TARGET_DB = "netflix_enriched.db";
 const OMDB_API_KEY = process.env.OMDB_API_KEY;
 
-// Change these after running inspect_db.js if needed
 const TABLE_NAME = "movies";
 const ID_COLUMN = "id";
 const TITLE_COLUMN = "title";
@@ -22,7 +21,6 @@ if (!fs.existsSync(SOURCE_DB)) {
   process.exit(1);
 }
 
-// Copy original DB so we do not edit it directly
 fs.copyFileSync(SOURCE_DB, TARGET_DB);
 
 const db = new sqlite3.Database(TARGET_DB, (err) => {
