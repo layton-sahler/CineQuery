@@ -25,18 +25,9 @@ app.post('/api/chat', async (req, res) => {
       tools: {
         getMovieData: {
           description: 'Search the movie database for titles and descriptions.',
-          // We bypass Zod entirely here to ensure no "None" type is generated
-          parameters: {
-            type: 'object',
-            properties: {
-              userQuestion: {
-                type: 'string',
-                description: 'The search query for movies',
-              },
-            },
-            required: ['userQuestion'],
-            additionalProperties: false, // OpenAI likes this for strictness
-          },
+          parameters: z.object({
+            userQuestion: z.string().describe('The search query for movies'),
+          }),
           execute: async ({ userQuestion }) => {
             console.log("🔍 Tool calling SnowLeopard for:", userQuestion);
             return await snowy.retrieve({ 
@@ -58,7 +49,6 @@ app.post('/api/chat', async (req, res) => {
     return res.end();
 
   } catch (error) {
-    // This will print the EXACT reason OpenAI is mad in your terminal
     console.error("❌ Runtime Error details:", error.data?.error || error);
     if (!res.headersSent) {
       res.status(500).send(error.message);
