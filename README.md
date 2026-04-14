@@ -1,10 +1,10 @@
-CineQuery
+CineQuery: 
 An intelligent movie discovery engine that leverages OpenAI GPT-4o and SnowLeopard AI to provide high-quality recommendations from a specialized movie database.
 
-Overview
+Overview: 
 CineQuery is a backend-driven AI agent capable of understanding natural language movie requests. It uses advanced RAG (Retrieval-Augmented Generation) techniques to query a SQLite database and stream human-like responses back to the user.
 
-Features
+Features: 
 Streaming AI Responses: Uses the Vercel AI SDK to stream text character-by-character for a modern chat experience.
 
 Contextual Tool Calling: Dynamically triggers the getMovieData tool to fetch real movie specs (titles, ratings, descriptions) based on user intent.
@@ -13,7 +13,7 @@ Vectorized Retrieval: Integrated with SnowLeopard AI for efficient data querying
 
 Express.js Backend: A robust Node.js server optimized for high-performance AI interactions.
 
-Tech Stack
+Tech Stack: 
 Language: Node.js (ES Modules)
 
 Framework: Express.js
@@ -24,38 +24,39 @@ Retrieval: SnowLeopard AI Client
 
 Schema Validation: Zod
 
-Prerequisites
+Prerequisites: 
 Node.js (v18 or higher)
 
 An OpenAI API Key
 
 SnowLeopard API Key & Datafile ID
 
-Installation & Setup
-Clone the repository:
+Installation & Setup: 
+Clone the repository
 
 Bash
 git clone https://github.com/layton-sahler/CineQuery.git
 cd CineQuery
+
 Install dependencies:
 
-Bash
+Bash: 
 npm install
 Configure Environment Variables:
 Create a .env file in the root directory:
 
-Code snippet
+Code snippet: 
 OPENAI_API_KEY=your_openai_key
 SNOWLEOPARD_API_KEY=your_snowleopard_key
 SNOWLEOPARD_DATAFILE_ID=your_datafile_id
 Start the Server:
 
-Bash
+Bash: 
 node server.js
 Testing the API
 You can test the backend logic using PowerShell to simulate a user chat:
 
-PowerShell
+PowerShell: 
 $body = @{
     messages = @(
         @{ role = "user"; content = "I'm looking for a dark sci-fi movie from the 2010s." }
